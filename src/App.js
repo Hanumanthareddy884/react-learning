@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Simple from './simple.js';
+import SimpleFnCmp from './simpleFn.js'
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-  <Simple></Simple>
+      <Simple></Simple>
+      <SimpleFnCmp name={"sff"}></SimpleFnCmp>
     </div>
   );
 }
