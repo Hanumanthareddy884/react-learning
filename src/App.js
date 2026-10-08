@@ -1,7 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
-import Simple from './simple.js';
-import SimpleFnCmp from './simpleFn.js'
+import logo from "./logo.svg";
+import "./App.css";
+import Simple from "./simple.js";
+import SimpleFnCmp from "./simpleFn.js";
+import PersInfo from "./components/PersInfo.js";
 function App() {
   return (
     <div className="App">
@@ -19,8 +20,10 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <Simple></Simple>
-      <SimpleFnCmp name={"sff"}></SimpleFnCmp>
+      {/* <Simple></Simple>
+      <SimpleFnCmp name={"sff"}></SimpleFnCmp> */}
+      <PersInfo name={"Reddy"} age={"28"}></PersInfo>
+      <PersInfo name={"RR"} age={"26"}></PersInfo>
     </div>
   );
 }
