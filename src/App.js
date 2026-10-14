@@ -3,14 +3,20 @@ import "./App.css";
 import Simple from "./simple.js";
 import SimpleFnCmp from "./simpleFn.js";
 import PersInfo from "./components/PersInfo.js";
-import React,{useState} from 'react'
-function App() {
-const [i,setState] = useState(0)
-const addValue=()=>{
-setState(i+1)
-// i++;
-console.log(i);
+import React, { useState } from "react";
+
+function initialState(){
+console.log("expensive process",Date.now())
+return 0
 }
+
+function App() {
+  const [i, setState] = useState(initialState());
+  const addValue = () => {
+    setState(i + 1);
+    // i++;
+    console.log(i);
+  };
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -30,13 +36,13 @@ console.log(i);
       {/* <Simple></Simple>
       <SimpleFnCmp name={"sff"}></SimpleFnCmp> */}
 
-{/* 
+      {/* 
       <PersInfo name={"Reddy"} age={"28"}></PersInfo>
       <PersInfo name={"RR"} age={"26"}></PersInfo> */}
 
-    {/* State  */}
-    <h1>{i}</h1>
-    <button onClick={addValue}>Button</button>
+      {/* State  */}
+      <h1>{i}</h1>
+      <button onClick={addValue}>Button</button>
     </div>
   );
 }
