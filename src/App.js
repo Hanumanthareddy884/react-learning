@@ -5,17 +5,24 @@ import SimpleFnCmp from "./simpleFn.js";
 import PersInfo from "./components/PersInfo.js";
 import React, { useState } from "react";
 
-function initialState(){
-console.log("expensive process",Date.now())
-return 0
+function initialState() {
+  console.log("expensive process", Date.now());
+  return 0;
 }
 
 function App() {
-  const [i, setState] = useState(initialState());
-  const addValue = () => {
-    setState(i + 1);
-    // i++;
-    console.log(i);
+  const [i, setState] = useState(()=>initialState());
+  // const addValue = () => {
+  //   setState(i + 1);
+  //   // i++;
+  //   console.log(i);
+  // };
+  const changeCount = (oper) => {
+    if (oper === "+") {
+      setState(i + 1);
+    } else {
+      setState(i - 1);
+    }
   };
   return (
     <div className="App">
@@ -42,7 +49,8 @@ function App() {
 
       {/* State  */}
       <h1>{i}</h1>
-      <button onClick={addValue}>Button</button>
+      <button onClick={()=>changeCount("+")}>Inc</button>
+      <button onClick={()=>changeCount("-")}>Dec</button>
     </div>
   );
 }
