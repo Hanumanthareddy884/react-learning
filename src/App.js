@@ -17,6 +17,8 @@ function App() {
   //   // i++;
   //   console.log(i);
   // };
+
+let msgg = <h1>Hello JSX</h1>
   const changeCount = (oper) => {
     if (oper === "+") {
       setState(i + 1);
@@ -51,6 +53,7 @@ function App() {
       <h1>{i}</h1>
       <button onClick={()=>changeCount("+")}>Inc</button>
       <button onClick={()=>changeCount("-")}>Dec</button>
+      {msgg}
     </div>
   );
 }
