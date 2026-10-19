@@ -4,6 +4,7 @@ import Simple from "./simple.js";
 import SimpleFnCmp from "./simpleFn.js";
 import PersInfo from "./components/PersInfo.js";
 import React, { useState } from "react";
+import ButtonComponent from "./button_components.js"
 
 function initialState() {
   console.log("expensive process", Date.now());
@@ -16,9 +17,9 @@ function App() {
   //   setState(i + 1);
   //   // i++;
   //   console.log(i);
-  // };
+  // };`
 
-let msgg = <h1>Hello JSX</h1>
+let msgg = <h1>Hello JSX <ButtonComponent></ButtonComponent></h1>
   const changeCount = (oper) => {
     if (oper === "+") {
       setState(i + 1);
